@@ -55,11 +55,12 @@ body {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     height: 100vh;
+    min-width: 420px;
 }
 
 main {
     grid-area: 3 / 1 / span 1 / -1;
-    padding-top: 10vmin;
+    padding-top: 8vh;
     display: grid;
     grid-template-areas: "hero"
                         "content";
@@ -81,6 +82,7 @@ footer {
     border-bottom: 1px solid rgb(70, 70, 70, 0.8);
     background-color: rgb(255, 255, 255);
     margin: 0 auto;
+    z-index: 1;
     /* display: none; */
 }
 
@@ -88,6 +90,7 @@ footer {
     padding: 0.75em;
     display: grid;
     justify-content: center;
+    align-self: center;
     grid-area: logo;
 }
 
@@ -108,11 +111,11 @@ nav li {
     background-color: #bbcbdb09;
     color: #022c4f;
 }
-.nav a:hover {
-    border-bottom: 3px solid #455e75;
+.desktop {
+    display: none;
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 760px) {
     .nav {
         grid-area: 1 / span 13 / span 1 / 13;
         grid-template-areas: "logo . . . nav nav nav";
@@ -130,6 +133,15 @@ nav li {
         color:#022c4f;
         background-color: #fff;
     }
+    .nav a:hover {
+        border-bottom: 3px solid #455e75;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .desktop {
+        display: inline-block;
+    } 
 }
 
 /* Main Container*/
@@ -162,7 +174,7 @@ nav li {
 article {
     /* background-color: rgba(241, 241, 241, 0.603); */
     background-color: #bbcbdb41;
-    padding: 1rem 1rem 1rem;
+    padding: 2rem 1rem;
     min-height: 150px;
     margin-top: 0.5rem;
     line-height: 1.4;

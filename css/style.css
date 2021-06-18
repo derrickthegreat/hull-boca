@@ -15,7 +15,7 @@
 /*Universal Styles*/
 
 html {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 * {
@@ -34,8 +34,6 @@ img {
 
 li {
     display: inline-block;
-    padding: 0.5em;
-    background-color: none;
     font-weight: bold;
 }
 
@@ -55,7 +53,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     height: 100vh;
-    min-width: 420px;
+    min-width: 350px;
 }
 
 main {
@@ -79,11 +77,9 @@ footer {
                         "nav nav nav";
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid rgb(70, 70, 70, 0.8);
+    border-bottom: 1.5px solid rgb(70, 70, 70, 0.15);
     background-color: rgb(255, 255, 255);
-    margin: 0 auto;
-    z-index: 1;
-    /* display: none; */
+    grid-gap: 1px;
 }
 
 .logo {
@@ -99,6 +95,14 @@ nav {
     justify-self: center;
     align-self: center;
 }
+.nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1;
+    text-align: center;
+    align-items: baseline;
+    justify-items: space-between;
+}
 
 nav li {
     border-top: 1px solid rgba(0, 0, 0, 0.7);
@@ -107,9 +111,12 @@ nav li {
     border-bottom: rgba(255, 255, 255, 1);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    padding: 8px;
+    padding: 0.5rem;
     background-color: #bbcbdb09;
     color: #022c4f;
+}
+.nav a {
+    font-size: 1em;
 }
 .desktop {
     display: none;
@@ -119,7 +126,6 @@ nav li {
     .nav {
         grid-area: 1 / span 13 / span 1 / 13;
         grid-template-areas: "logo . . . nav nav nav";
-        border-bottom: rgb(70, 70, 70, 0.8) 1px solid;
         background-color: rgb(255, 255, 255);
     }
     .logo {
@@ -149,11 +155,12 @@ nav li {
 .hero {
     grid-area: hero;
     height: 100vmin;
-    background: url('/img/301.jpg') center;
+    background: url('../img/301.jpg') center;
     background-size: cover;
     display: grid;
     justify-content: stretch;
     align-items: center;
+    border-bottom: rgb(70, 70, 70, 0.3) 1.5px solid;
 }
 
 .hero img {
@@ -192,8 +199,9 @@ article {
 /* Footer */
 
 footer {
-    border-top: 1px solid rgba(212, 212, 212, 0.7);
-    background-color: rgb(255, 255, 255);
+    border-top: 1px solid #bbcbdb1c;;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #bbcbdb41;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0 5px;
@@ -219,7 +227,9 @@ footer {
     align-self: stretch;
     color: #022c4f;
 }
-
+.legal ul {
+    list-style-type: disc;
+}
 .legal li {
     color: #022c4f;
     font-size: 0.9em;

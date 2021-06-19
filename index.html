@@ -14,10 +14,10 @@
         </div>
         <nav>
             <ul>
-                <li class="desktop"><a href="/boca-raton/">About</a></li>
-                <li><a href="./boca-raton/">Contact</a></li>
-                <li><a href="./boca-raton/">Products</a></li>
-                <li><a href="./boca-raton/">Report a Loss</a></li>
+                <li class="desktop"><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Report a Loss</a></li>
                 <li><a href="https://hullbocaraton.epaypolicy.com/" target="_blank">Online Pay</a></li>
             </ul>
         </nav>
@@ -26,24 +26,85 @@
         <header class="hero">
             <h1>Hull & Co Boca Raton</h1>
         </header>
-        <article>
-            <h2>Article 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, incidunt numquam! Id, quis numquam, vero nesciunt porro vitae praesentium ullam architecto reiciendis, reprehenderit quibusdam et fuga? Velit quasi praesentium dolorem quam adipisci voluptates nemo asperiores eligendi dolore molestiae corrupti sed distinctio deleniti esse eum suscipit sapiente, possimus aliquid minima deserunt amet dicta impedit ipsam. Officiis aspernatur blanditiis, minus rem doloribus fugiat laboriosam quisquam laborum facere eum ipsam vitae et ex impedit, harum quos tempore provident eos reprehenderit at vero soluta sed? Temporibus porro doloremque iste eaque facere eveniet sunt dignissimos laborum! Similique quis explicabo, soluta autem recusandae doloribus distinctio nostrum.</p>
-        </article>
-        <article>
-            <h2>Article 2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Eveniet eius accusantium, quia labore laudantium quidem 
-                vel odio fugit ipsam ab amet quis impedit a veniam ducimus 
-                beatae iure officia voluptatibus!</p>
-        </article>
-        <article>
-            <h2>Article 3</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Eveniet eius accusantium, quia labore laudantium quidem 
-                vel odio fugit ipsam ab amet quis impedit a veniam ducimus 
-                beatae iure officia voluptatibus!</p>
-        </article>
+        <section id="about">
+            <h2>About Us</h2>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, incidunt numquam! Id, quis numquam, vero nesciunt porro vitae praesentium ullam architecto reiciendis, reprehenderit quibusdam et fuga? Velit quasi praesentium dolorem quam adipisci voluptates nemo asperiores eligendi dolore molestiae corrupti sed distinctio deleniti esse eum suscipit sapiente, possimus aliquid minima deserunt amet dicta impedit ipsam. Officiis aspernatur blanditiis, minus rem doloribus fugiat laboriosam quisquam laborum facere eum ipsam vitae et ex impedit, harum quos tempore provident eos reprehenderit at vero soluta sed? Temporibus porro doloremque iste eaque facere eveniet sunt dignissimos laborum! Similique quis explicabo, soluta autem recusandae doloribus distinctio nostrum.</p>
+            </article>
+        </section>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="products">
+                <article>
+                    <header>
+                        <h3>Commercial</h3>
+                    </header>
+                </article>
+                <article>
+                    <header>
+                        <h3>Personal</h3>
+                    </header>
+                </article>
+                <article>
+                    <header>
+                        <h3>Professional</h3>
+                    </header>
+                </article>
+                <article>
+                    <header>
+                        <h3>Instant Quotes</h3>
+                    </header>
+                </article>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <article class="contact-card">
+                <header>
+                    <img src="./img/me.jpg" alt="Portrait">
+                </header>
+                <div id="name-title">
+                    <h3>Derrick Alvarez</h3>
+                    <p>Underwriter</p>
+                </div>
+                <aside>
+                    <p>p: 561-453-3480</p>
+                    <p>e: derrick.alvarez@hullco.com</p>
+                </aside>
+            </article>
+            <article class="contact-card">
+                <header>
+                    <img src="./img/me.jpg" alt="Portrait">
+                </header>
+                <div id="name-title">
+                    <h3>Derrick Alvarez</h3>
+                    <p>Underwriter</p>
+                </div>
+                <aside>
+                    <p>p: 561-453-3480</p>
+                    <p>e: derrick.alvarez@hullco.com</p>
+                </aside>
+            </article>
+        </section>
+        <section id="claim">
+            <h2>Report A Loss</h2>
+            <form>
+                <label for="named-insured">Named Insured:</label>
+                <input type="text" id="named-insured" required>
+                <label for="pol-num">Policy Number:</label>
+                <input type="number" id="pol-num" required>
+                <label for="dol" required>Date of Loss:</label>
+                <input type="date" id="dol" required>
+                <label for="description">Description:</label>
+                <textarea required>
+                    Write detailed loss description here.
+                </textarea>
+                <div class="buttons">
+                    <button>Reset Form</button>
+                    <button type="submit" disabled>Submit Claim</button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <p class="address">301 Yamato Rd, Suite 2100<br>

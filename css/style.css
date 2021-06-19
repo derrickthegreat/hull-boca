@@ -53,12 +53,11 @@ body {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     height: 100vh;
-    min-width: 350px;
 }
 
 main {
     grid-area: 3 / 1 / span 1 / -1;
-    padding-top: 8vh;
+    padding-top: 20vh;
     display: grid;
     grid-template-areas: "hero"
                         "content";
@@ -73,61 +72,88 @@ footer {
 .nav {
     position: fixed;
     display: grid;
-    grid-template-areas: "logo logo logo"
-                        "nav nav nav";
-    justify-content: space-between;
-    width: 100%;
-    /* border-bottom: 1.5px solid rgb(70, 70, 70, 0.15); */
+    grid-template-areas: "logo logo logo logo logo"
+                        "nav nav nav nav nav";
+    justify-content: center;
+    text-align: center;
+    min-width: 100%;
     background-color: rgb(255, 255, 255);
     grid-gap: 1px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
-    padding: 0.75em;
     display: grid;
     justify-content: center;
     align-self: center;
     grid-area: logo;
+    padding: 1em 0;
 }
 
 nav {
     grid-area: nav;
-    justify-self: center;
-    align-self: center;
-}
-.nav ul {
-    display: flex;
-    flex-flow: row nowrap;
-    text-align: center;
-    align-items: baseline;
-    justify-items: space-between;
 }
 
-nav li {
-    border-top: 1px solid rgba(0, 0, 0, 0.7);
-    border-left: 1px solid rgba(0, 0, 0, 0.7);
-    border-right: 1px solid rgba(0, 0, 0, 0.7);
-    border-bottom: rgba(255, 255, 255, 1);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding: 0.5rem;
-    background-color: #bbcbdb09;
-    color: #022c4f;
-    margin: 0 5px;
-}
-.nav a {
-    font-size: 1em;
+.nav ul {
+    display: flex;
+    padding: 0.1em;
+    border: 1px solid rgba(0, 0, 0, 0.39);
+    background-color: #8295a5b0;
 }
 .desktop {
     display: none;
 }
+nav a {
+    color: #fff;
+    letter-spacing: 1px;
+}
+nav li {
+    font-size: 0.95em;
+    margin: auto 1em;
+    letter-spacing: 2px;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 1em 0;
+}
+
+@media only screen and (min-width: 400px) {  
+    .nav {
+        grid-template-areas: "logo logo logo"
+                            "nav nav nav";
+    }
+    
+    .nav ul {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    } 
+    nav a {
+        color: #022c4f
+    } 
+    nav li {
+        border-top: 1px solid rgba(0, 0, 0, 0.7);
+        border-left: 1px solid rgba(0, 0, 0, 0.7);
+        border-right: 1px solid rgba(0, 0, 0, 0.7);
+        border-bottom: rgba(219, 219, 219, 0.884);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 0.5rem;
+        background-color: #bbcbdb09;
+        color: #022c4f;
+        margin: 0 2px;
+    }
+    .nav a {
+        font-size: 1em;
+    }
+}
+
 
 @media only screen and (min-width: 760px) {
     .nav {
         grid-area: 1 / span 13 / span 1 / 13;
         grid-template-areas: "logo . . . nav nav nav";
         background-color: rgb(255, 255, 255);
+        justify-content: space-around;
     }
     .logo {
         grid-area: 1 / 1 / span 1 / span 3;
@@ -135,13 +161,27 @@ nav li {
     .logo img {
         height: 75px;
     }
+
+    nav {
+        align-self: center;
+        justify-self: end;
+    }
     nav li {
         border: none;
         color:#022c4f;
         background-color: #fff;
+        font-size: 1.2rem;
     }
     .nav a:hover {
         border-bottom: 3px solid #455e75;
+    }
+
+    main {
+        padding-top: 10vmin;
+    }
+
+    .hero h1 {
+        font-size: 5em;
     }
 }
 
@@ -169,7 +209,6 @@ nav li {
 }
 
 .hero h1 {
-    font-size: 5rem;
     text-shadow: -1px 1px 2px #000000;
     /* background-color:rgba(0, 0, 0, 0.5); */
     padding: 1.5rem;
@@ -177,6 +216,7 @@ nav li {
     text-align: center;
     font-weight: normal;
     font-family: 'Dancing Script', cursive;
+    font-size: 5em;
 }
 
 article {
@@ -189,10 +229,10 @@ article {
     text-align: justify;
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 760px) {
     article {
-        max-width: 600px;
-        padding: 2rem 5rem 3rem;
+        max-width: 500px;
+        padding: 2em 5em 2em;
         justify-self: center;
     }
 }
